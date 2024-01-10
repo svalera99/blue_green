@@ -100,6 +100,8 @@ jobs:
       - name: Install gke-gcloud-auth-plugin
         run: |
           REPO_URL="https://packages.cloud.google.com/apt"
+          curl -f https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+
           echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] $REPO_URL cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list >/dev/null
           sudo wget -q https://packages.cloud.google.com/apt/doc/apt-key.gpg -O /usr/share/keyrings/cloud.google.gpg
 
