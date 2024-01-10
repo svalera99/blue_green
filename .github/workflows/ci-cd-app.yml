@@ -76,7 +76,7 @@ jobs:
     
     env:
       PROJECT_ID: ${{ secrets.GKE_PROJECT }}
-      GKE_CLUSTER: gke_global-impulse-410819_us-central1_my-cluster    # TODO: update to cluster name
+      GKE_CLUSTER: gke_global-impulse-410819_us-central1_my-cluster 
       GKE_REGION: us-central1
 
     steps:
